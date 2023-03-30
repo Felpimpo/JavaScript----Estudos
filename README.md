@@ -1,2 +1,2 @@
 # JavaScript
-### Aprimorando meus conhecimentos em JavaScrit
+### Aprimorando meus conhecimentos em JavaScrit 📚
