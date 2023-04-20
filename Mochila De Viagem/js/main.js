@@ -2,8 +2,11 @@
 const form = document.getElementById("novoItem");
 const lista = document.getElementById("lista")
 
-form.addEventListener("submit", (evento) =>{
-    //Interroper a função de enviar os dados para a pagina
+itens.forEach( (elemento) => {    
+    criaElemento(elemento)
+} )
+
+form.addEventListener("submit", (evento) => {  
     evento.preventDefault()
     criaElemento(evento.target.elements['nome'].value, evento.target.elements['quantidade'].value)
 })
