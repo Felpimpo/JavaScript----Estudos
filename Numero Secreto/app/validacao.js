@@ -1,12 +1,12 @@
-function verificaValor(chute) {
+function verificaSeOChutePossuiUmValorValido(chute) {
     const numero = +chute
 
-    if (chuteInvalido(numero)) {
+    if (chuteForInvalido(numero)) {
         elementoChute.innerHTML += '<div>Valor inválido</div>'
         return
     }
 
-    if (numeroPermitido(numero)) {
+    if (numeroForMaiorOuMenorQueOValorPermitido(numero)) {
         elementoChute.innerHTML += `
         <div>Valor inválido: Fale um número entre ${menorValor} e ${maiorValor}</div>
         `
@@ -18,7 +18,7 @@ function verificaValor(chute) {
             <h2>Você acertou!</h2>
             <h3>O número secreto era ${numeroSecreto}</h3>
 
-            <button id="jogar-novamente" class"btn-jogar"> Jogar Novamente </button> 
+            <button id="jogar-novamente" class="btn-jogar">Jogar novamente</button>
         `
     } else if (numero > numeroSecreto) {
         elementoChute.innerHTML += `
@@ -29,20 +29,18 @@ function verificaValor(chute) {
         <div>O número secreto é maior <i class="fa-solid fa-up-long"></i></div>
         `
     }
- 
 }
 
-function chuteInvalido(numero) {
+function chuteForInvalido(numero) {
     return Number.isNaN(numero)
 }
 
-function numeroPermitido(numero){
+function numeroForMaiorOuMenorQueOValorPermitido(numero){
     return numero > maiorValor || numero < menorValor
 }
 
-document.body.addEventListener('click', e =>{
-    if (e.traget.id == "jogar-novamente"){
-        window.location.reload
+document.body.addEventListener('click', e => {
+    if (e.target.id == 'jogar-novamente') {
+        window.location.reload()
     }
-
 })

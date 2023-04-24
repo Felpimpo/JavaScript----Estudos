@@ -38,6 +38,15 @@ h3 {
 .mensagem {
     font-size: 1.5em;
     margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.mensagem1 {
+    font-size: 1.5em;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
 }
 
 .box {
@@ -46,6 +55,8 @@ h3 {
     font-size: 4em;
     padding: 10px;
     margin: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn-jogar {
